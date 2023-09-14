@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 // Получаем элемент canvas (поле для рисования) из DOM
     const canvas = document.getElementById('whiteboard')
-    ,brushSize = document.getElementById("brushSize");
+    ,brushSize = document.getElementById("brushSize")
+    ,clearButton = document.getElementById("clearBoard");
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -45,4 +46,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
     brushSize.addEventListener("input", ()=>{
         ctx.lineWidth = brushSize.value;
     });
+    
+    clearButton.addEventListener("click", clearBoard);
+
+    document.addEventListener("keydown", (event)=>{
+        if(event.code === "Space"){
+            clearBoard();
+        }
+    });
+
+    function clearBoard(){
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
 });
