@@ -1,5 +1,5 @@
 # Whiteboard
-This project is day #18 of <a href="https://github.com/grigoryan-m/100-day-javascript.git">100-day-javascript</a>!
+This project is day #18 of <a href="https://github.com/grigoryan-m/31-javascript-projects.git">31-javascript-projects</a>!
 
 Should work on mobile devices.
 
